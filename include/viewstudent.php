@@ -29,7 +29,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <style>
         .table_th {
                padding: 5px;
-               font-size: 11px;
+               font-size: 15px;
           }
           .table_td {
                padding: 3px;
@@ -54,7 +54,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     }
                     unset($_SESSION['message']);
                     ?>
-                    <table border="1px">
+                    <table border="1px" id="myTable">
                          <tr>
                               <th class="table_th">UserName</th>
                               <th class="table_th">Email</th>
@@ -132,6 +132,29 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           <h1>
                <?php echo $_SESSION['name']; ?>
           </h1>
+          <script>
+               function myFunction() {
+
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+          </script>
      </body>
 
      </html>

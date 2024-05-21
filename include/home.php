@@ -19,7 +19,7 @@
     <div class="container-fluid">
 
         <?php include "logout.php" ?>
-
+    
         <div class="row p-0 m-3">
             <div class="col-sm-3" >
                 <div id="accordion">

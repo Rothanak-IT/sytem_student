@@ -63,6 +63,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     .top {
         float: left;
     }
+    .card{
+        
+    }
 </style>
 
 <body>
@@ -114,8 +117,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
                 </div>
             </div>
-            <div class="col-sm" style="background-color: #e6ffff;">
-                <div class="row">
+            <div class="col-sm-9" style="background-color: #e6ffff;">
+                <div class="row ">
                     <h4 class="text-center text-danger"></h4>
                     <div class="content">
                         <div class="container d-flex justify-content-center">
@@ -205,7 +208,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         <input class="top btn btn-primary" type="submit" name="submit"
                                             value="Add Student">
                                     </div>
+                                    
                                 </form><br><br>
+                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." class="form-control" style=" width: 30%; float: right; "><br>
                                 <?php include 'viewstudent.php' ?>
                         </div>
 
