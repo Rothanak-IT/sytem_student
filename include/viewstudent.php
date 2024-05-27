@@ -27,20 +27,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
      </head>
     <style>
-        .table_th {
-               padding: 5px;
-               font-size: 15px;
-          }
-          .table_td {
-               padding: 3px;
-               background-color: gray;
-          }
+       
           label{
             margin-right: 60px;
           }
-          th{
-            background-color: white;
-          }
+         .table{
+          width: 100% !important;
+         }
     </style>
 
      <body>
@@ -54,20 +47,20 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     }
                     unset($_SESSION['message']);
                     ?>
-                    <table border="1px" id="myTable">
+                    <table border="1px" id="myTable" class="table table-striped" >
                          <tr>
-                              <th class="table_th">UserName</th>
-                              <th class="table_th">Email</th>
-                              <th class="table_th">Phone</th>
-                              <th class="table_th">Password</th>
-                              <th class="table_th">Gender</th>
-                              <th class="table_th">Age</th>
-                              <th class="table_th">Date</th>
-                              <th class="table_th">Birth</th>
-                              <th class="table_th">Address</th>
-                              <th class="table_th">Skill</th>
-                              <th class="table_th">Grade</th>
-                              <th class="table_th">Shift</th>
+                         <th class="table_th">អត្តលេខសិស្ស</th>
+                              <th class="table_th">ឈ្មោះ</th>
+                              <th class="table_th">អ៊ីមែល</th>
+                              <th class="table_th">លេខទូរស័ព្ទ</th>
+                              <th class="table_th">ភេទ</th>
+                              <th class="table_th">អាយុ</th>
+                              <th class="table_th">ថ្ងៃខែឆ្នាំកំណើត</th>
+                              <th class="table_th">ទីកន្លែងកំណើត</th>
+                              <th class="table_th">អាស័យដ្ថាន</th>
+                              <th class="table_th">ជំនាញ</th>
+                              <th class="table_th">រៀនថ្នាក់</th>
+                              <th class="table_th">ម៉ោង</th>
                               <th class="table_th">Delete</th>
                               <th class="table_th">Update</th>
                          </tr>
@@ -75,6 +68,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                          while ($info = $result->fetch_assoc()) {
                               ?>
                               <tr>
+                                   <td class="table_td">
+                                        <?php echo "{$info['s_id']}" ?>
+                                   </td>
                                    <td class="table_td">
                                         <?php echo "{$info['username']}" ?>
                                    </td>
@@ -84,9 +80,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                    <td class="table_td">
                                         <?php echo "{$info['phone']}" ?>
                                    </td>
-                                   <td class="table_td">
-                                        <?php echo "{$info['pass']}" ?>
-                                   </td>
+          
                                    <td class="table_td">
                                         <?php echo "{$info['gender']}" ?>
                                    </td>
@@ -134,26 +128,23 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           </h1>
           <script>
                function myFunction() {
-
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
+               var input, filter, table, tr, td, i, txtValue;
+               input = document.getElementById("myInput");
+               filter = input.value.toUpperCase();
+               table = document.getElementById("myTable");
+               tr = table.getElementsByTagName("tr");
+               for (i = 0; i < tr.length; i++) {
+               td = tr[i].getElementsByTagName("td")[0];
+               if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                    } else {
+                    tr[i].style.display = "none";
+                    }
+               }
+               }
+               }
           </script>
      </body>
 

@@ -10,6 +10,7 @@ $sql = "SELECT * FROM user WHERE id='$id'";
 $result = mysqli_query($conn, $sql);
 $info=$result->fetch_assoc();
 if (isset($_POST["update"])) {
+     $S_id = $_POST['S_id'];
      $username = $_POST["username"];
      $email = $_POST["email"];
      $phone = $_POST["phone"];
@@ -23,7 +24,7 @@ if (isset($_POST["update"])) {
      $grade = $_POST['grade'];
     $shift = $_POST['shift'];
      $usertype = "student";
-    $query = "UPDATE user SET username='$username',email='$email',phone='$phone',pass='$pass' gender='$gender',age='$age',dat='$dat',birth='$birth',addres='$addres',skill='$skill',grade='$grade',shift='$shift' WHERE id='$id'";
+    $query = "UPDATE user SET username='$username',email='$email',phone='$phone',pass='$pass' gender='$gender',age='$age',dat='$dat',birth='$birth',addres='$addres',skill='$skill',grade='$grade',shift='$shift',S_id='$S_id' WHERE id='$id'";
     $result2 = mysqli_query($conn,$query);
     if($result2){
         header("locatio: update.php");
@@ -59,6 +60,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <form action="#" method="POST" >
                        <div>
                        <label>Username</label>
+                        <input type="text" name="s_id" value="<?php echo"{$info['s_id']}";?>" >
+                       </div>
+                       <div>
+                       <label>Username</label>
                         <input type="text" name="username" value="<?php echo"{$info['username']}";?>" >
                        </div>
                        <div>
@@ -70,9 +75,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         <input type="text" name="phone" value="<?php echo"{$info['phone']}"?>">
                        </div>
                        <div>
-                       <label>Password</label>
-                        <input type="number" name="pass" value="<?php echo"{$info['pass']}"?>">
-                       </div>
+                       
                        <div>
                        <label>Gender</label>
                         <input type="text" name="gender" value="<?php echo"{$info['gender']}"?>">

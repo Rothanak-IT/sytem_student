@@ -6,10 +6,10 @@ $db_name = "student_db";
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
 if (isset($_POST["submit"])) {
+    $s_id = $_POST['s_id'];
     $username = $_POST["username"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
-    $pass = $_POST["pass"];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
     $dat = $_POST['dat'];
@@ -26,7 +26,7 @@ if (isset($_POST["submit"])) {
     if ($row_count == 6) {
         echo "<script type='text/javascript'>alert('Username Already Exist. Try Another One');</script>";
     } else {
-        $sql = "INSERT INTO user(username,email,phone,usertype,pass,gender,age,dat,birth,addres,skill,grade,shift) VALUES ('$username','$email','$phone','$usertype','$pass','$gender','$age','$dat','$birth','$addres','$skill','$grade','$shift')";
+        $sql = "INSERT INTO user(username,email,phone,usertype,gender,age,dat,birth,addres,skill,grade,shift,s_id) VALUES ('$username','$email','$phone','$usertype','$gender','$age','$dat','$birth','$addres','$skill','$grade','$shift','$s_id')";
         $result = mysqli_query($conn, $sql);
     }
     if ($result) {
@@ -63,9 +63,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     .top {
         float: left;
     }
-    .card{
-        
-    }
+
+    .card {}
 </style>
 
 <body>
@@ -128,52 +127,56 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 <form action="#" method="POST">
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <label class="form-label">Username:</label>
+                                            <label class="form-label">អត្តលេខសិស្ស</label>
+                                            <input type="text" class="form-control" name="s_id" placeholder="">
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label">ឈ្មោះ</label>
                                             <input type="text" class="form-control" name="username" placeholder="">
                                         </div>
 
                                         <div class="col">
-                                            <label class="form-label">Email:</label>
+                                            <label class="form-label">អ៊ីមែល</label>
                                             <input type="text" class="form-control" name="email" placeholder="">
                                         </div>
                                         <div class="col">
-                                            <label class="form-label">Phone:</label>
+                                            <label class="form-label">លេខទូរស័ព្ទ</label>
                                             <input type="text" class="form-control" name="phone" placeholder="">
                                         </div>
 
+                                    </div>
+                                    <div class="row mb-3">
+                                        
                                         <div class="col">
-                                            <label class="form-label">Password:</label>
-                                            <input type="text" class="form-control" name="pass" placeholder="">
-                                        </div>
-                                        <div class="col">
-                                            <label class="form-label">Gender:</label>
+                                            <label class="form-label">ភេទ</label>
                                             <select name="gender" class="form-control">
                                                 <option value="ប្រុស">ប្រុស</option>
                                                 <option value="ស្រី">ស្រី</option>
                                                 <option value="ផ្សេងៗ">ផ្សេងៗ</option>
                                             </select>
                                         </div>
-
-                                    </div>
-                                    <div class="row mb-3">
                                         <div class="col">
-                                            <label class="form-label">Age:</label>
+                                            <label class="form-label">អាយុ</label>
                                             <input type="number" class="form-control" name="age" placeholder="">
                                         </div>
                                         <div class="col">
-                                            <label class="form-label">Date of Bird:</label>
+                                            <label class="form-label">ថ្ងៃខែឆ្នាំកំណើត</label>
                                             <input type="date" class="form-control" name="dat" placeholder="">
                                         </div>
                                         <div class="col">
-                                            <label class="form-label">Place of birth:</label>
+                                            <label class="form-label">ទីកន្លែងកំណើត</label>
                                             <input type="text" class="form-control" name="birth" placeholder="">
                                         </div>
+
+                                    </div>
+                                    <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">អាស័យដ្ថាន</label>
+                                                <input type="text" class="form-control" name="addres" placeholder="">
+                                            </div>
+
                                         <div class="col">
-                                            <label class="form-label">Address:</label>
-                                            <input type="text" class="form-control" name="addres" placeholder="">
-                                        </div>
-                                        <div class="col">
-                                            <label class="form-label">Skill:</label>
+                                            <label class="form-label">ជំនាញ</label>
                                             <select name="skill" class="form-control">
                                                 <option value="វិស្វកម្មអគ្គិសនី">វិស្វកម្មអគ្គិសនី</option>
                                                 <option value="វិស្វកម្មអេឡិចត្រូនិច">វិស្វកម្មអេឡិចត្រូនិច</option>
@@ -183,34 +186,34 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                                 <option value="វិស្វកម្មបច្ចេកវិទ្យា">វិស្វកម្មបច្ចេកទេស</option>
                                             </select>
                                         </div>
-                                        
-                                    </div>
-                                    <div class="row mb-3"> 
                                         <div class="col">
-                                            <label class="form-label">Grade:</label>
-                                            <select name="grade" class="form-control">
-                                                <option value="ប្រុស">ប្រុស</option>
-                                                <option value="ស្រី">ស្រី</option>
-                                                <option value="ផ្សេងៗ">ផ្សេងៗ</option>
+                                            <label class="">រៀនថ្នាក់</label>
+                                            <select name="grade"class="form-control">
+                                                <option value="ថ្នាក់បរិញ្ញាបត្រ">ថ្នាក់បរិញ្ញាប័ត្រ</option>
+                                                <option value="ថ្នាក់បរិញ្ញាបត្ររង">ថ្នាក់បរិញ្ញាប័ត្ររង</option>
+                                                <option value="ថ្នាក់បណ្ឌិត">ថ្នាក់បណ្ឌិត</option>
+                                                <option value="ថ្នាក់អនុបណ្ឌិត">ថ្នាក់អនុបណ្ឌិត</option>
                                             </select>
                                         </div>
                                         <div class="col">
-                                        <label class="form-label">Shift:</label>
-                                        <select name="shift"class="form-control">
-                                            <option value="វេនព្រឹក">វេនព្រឹក</option>
-                                            <option value="វេនរសៀល">វេនរសៀល</option>
-                                            <option value="វេនយប់">វេនយប់</option>
-                                            <option value="វិស្វកម្មសំណង់សុីវិល">វេន​ សៅរ៍-អាទិត្យ</option>
-                                        </select>
+                                            <label class="form-label">ម៉ោង</label>
+                                            <select name="shift" class="form-control">
+                                                <option value="វេនព្រឹក">វេនព្រឹក</option>
+                                                <option value="វេនរសៀល">វេនរសៀល</option>
+                                                <option value="វេនយប់">វេនយប់</option>
+                                                <option value="វិស្វកម្មសំណង់សុីវិល">វេន​ សៅរ៍-អាទិត្យ</option>
+                                            </select>
                                         </div>
                                     </div>
+                                    
                                     <div>
                                         <input class="top btn btn-primary" type="submit" name="submit"
                                             value="Add Student">
                                     </div>
-                                    
+
                                 </form><br><br>
-                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." class="form-control" style=" width: 30%; float: right; "><br>
+                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
+                                    class="form-control" style=" width: 30%; float: right; "><br>
                                 <?php include 'viewstudent.php' ?>
                         </div>
 
