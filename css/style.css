@@ -14,7 +14,3 @@ img {
 a {
     text-decoration: none;
 }
-
-.list-group-item:hover {
-    background-color: #e6f7ff;
-}

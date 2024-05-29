@@ -12,7 +12,7 @@ if($_GET['student_id']){
     $sql="DELETE FROM user WHERE id='$user_id'";
     $result = mysqli_query($conn,$sql);
     if($result){
-        $_SESSION['message']='<p style="color: green;" >Delete Student is Successfully</p>';
+        $_SESSION['message']='<center><p style="color: green;" >Delete Student is Successfully</p></center>';
         header("location: addstudent.php");
     } 
 }

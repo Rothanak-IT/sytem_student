@@ -4,7 +4,6 @@ $unmae = "root";
 $password = "";
 $db_name = "student_db";
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
-
 if (isset($_POST["submit"])) {
     $s_id = $_POST['s_id'];
     $username = $_POST["username"];
@@ -64,16 +63,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         float: left;
     }
 
-    .card {}
 </style>
 
 <body>
     <div class="container-fluid">
         <?php include "logout.php" ?>
         <div class="row p-0 m-3">
-            <div class="col-sm-3">
+            <div class="col-sm-3" style=" background-color:  #99d6ff; ">
                 <div id="accordion">
-                    <div class="card">
+                    <div class="card"  >
                         <div class="card-header">
                             <a class="btn text-primary" data-bs-toggle="collapse" href="#collapseOne">
                                 Student Management
@@ -116,7 +114,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
                 </div>
             </div>
-            <div class="col-sm-9" style="background-color: #e6ffff;">
+            <div class="col-sm" style="background-color: #f0f0f5; height: 520px; ">
                 <div class="row ">
                     <h4 class="text-center text-danger"></h4>
                     <div class="content">
@@ -127,28 +125,26 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 <form action="#" method="POST">
                                     <div class="row mb-3">
                                         <div class="col">
-                                            <label class="form-label">អត្តលេខសិស្ស</label>
+                                            <label class="form-label" style="float: left;" >អត្តលេខសិស្ស</label>
                                             <input type="text" class="form-control" name="s_id" placeholder="">
                                         </div>
                                         <div class="col">
-                                            <label class="form-label">ឈ្មោះ</label>
+                                            <label class="form-label" style="float: left;">ឈ្មោះ</label>
                                             <input type="text" class="form-control" name="username" placeholder="">
                                         </div>
 
                                         <div class="col">
-                                            <label class="form-label">អ៊ីមែល</label>
+                                            <label class="form-label"style="float: left;">អ៊ីមែល</label>
                                             <input type="text" class="form-control" name="email" placeholder="">
                                         </div>
-                                        <div class="col">
-                                            <label class="form-label">លេខទូរស័ព្ទ</label>
-                                            <input type="text" class="form-control" name="phone" placeholder="">
-                                        </div>
-
                                     </div>
                                     <div class="row mb-3">
-                                        
+                                    <div class="col">
+                                            <label class="form-label" style="float: left;">លេខទូរស័ព្ទ</label>
+                                            <input type="text" class="form-control" name="phone" placeholder="">
+                                        </div>
                                         <div class="col">
-                                            <label class="form-label">ភេទ</label>
+                                            <label class="form-label" style="float: left;">ភេទ</label>
                                             <select name="gender" class="form-control">
                                                 <option value="ប្រុស">ប្រុស</option>
                                                 <option value="ស្រី">ស្រី</option>
@@ -156,27 +152,27 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                             </select>
                                         </div>
                                         <div class="col">
-                                            <label class="form-label">អាយុ</label>
+                                            <label class="form-label" style="float: left;">អាយុ</label>
                                             <input type="number" class="form-control" name="age" placeholder="">
                                         </div>
-                                        <div class="col">
-                                            <label class="form-label">ថ្ងៃខែឆ្នាំកំណើត</label>
+                                    </div>
+                                    <div class="row mb-3">
+                                    <div class="col">
+                                            <label class="form-label" style="float: left;">ថ្ងៃខែឆ្នាំកំណើត</label>
                                             <input type="date" class="form-control" name="dat" placeholder="">
                                         </div>
                                         <div class="col">
-                                            <label class="form-label">ទីកន្លែងកំណើត</label>
+                                            <label class="form-label" style="float: left;">ទីកន្លែងកំណើត</label>
                                             <input type="text" class="form-control" name="birth" placeholder="">
                                         </div>
-
-                                    </div>
-                                    <div class="row mb-3">
-                                            <div class="col">
-                                                <label class="form-label">អាស័យដ្ថាន</label>
-                                                <input type="text" class="form-control" name="addres" placeholder="">
-                                            </div>
-
                                         <div class="col">
-                                            <label class="form-label">ជំនាញ</label>
+                                            <label class="form-label" style="float: left;">អាស័យដ្ថាន</label>
+                                            <input type="text" class="form-control" name="addres" placeholder="">
+                                        </div>
+                                    </div>
+                                        <div class="row mb-3">
+                                        <div class="col">
+                                            <label class="form-label" style="float: left;">ជំនាញ</label>
                                             <select name="skill" class="form-control">
                                                 <option value="វិស្វកម្មអគ្គិសនី">វិស្វកម្មអគ្គិសនី</option>
                                                 <option value="វិស្វកម្មអេឡិចត្រូនិច">វិស្វកម្មអេឡិចត្រូនិច</option>
@@ -187,8 +183,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                             </select>
                                         </div>
                                         <div class="col">
-                                            <label class="">រៀនថ្នាក់</label>
-                                            <select name="grade"class="form-control">
+                                            <label class="" style="float: left;">រៀនថ្នាក់</label>
+                                            <select name="grade" class="form-control">
                                                 <option value="ថ្នាក់បរិញ្ញាបត្រ">ថ្នាក់បរិញ្ញាប័ត្រ</option>
                                                 <option value="ថ្នាក់បរិញ្ញាបត្ររង">ថ្នាក់បរិញ្ញាប័ត្ររង</option>
                                                 <option value="ថ្នាក់បណ្ឌិត">ថ្នាក់បណ្ឌិត</option>
@@ -196,7 +192,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                             </select>
                                         </div>
                                         <div class="col">
-                                            <label class="form-label">ម៉ោង</label>
+                                            <label class="form-label" style="float: left;">ម៉ោង</label>
                                             <select name="shift" class="form-control">
                                                 <option value="វេនព្រឹក">វេនព្រឹក</option>
                                                 <option value="វេនរសៀល">វេនរសៀល</option>
@@ -204,25 +200,22 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                                 <option value="វិស្វកម្មសំណង់សុីវិល">វេន​ សៅរ៍-អាទិត្យ</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    
+                                        </div>
                                     <div>
                                         <input class="top btn btn-primary" type="submit" name="submit"
                                             value="Add Student">
                                     </div>
 
-                                </form><br><br>
-                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
-                                    class="form-control" style=" width: 30%; float: right; "><br>
-                                <?php include 'viewstudent.php' ?>
+                                </form><br><br><br><br>
+                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." class="form-control" style=" width: 30%; float: right; "><br>
+                                
                         </div>
-
+                        
                         </center>
-
-
                     </div>
                 </div>
             </div>
+            <?php include 'viewstudent.php' ?>
         </div>
     </div>
     </div>

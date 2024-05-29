@@ -29,22 +29,18 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <center>
-                                <a class="btn text-primary" data-bs-toggle="collapse" href="#collapseOne">
-                                    Student Management
-                                </a>
-                            </center>
+                            <a class="btn text-primary" data-bs-toggle="collapse" href="#collapseOne">
+                                Student Management
+                            </a>
                         </div>
                         <?php include "list_conten.php" ?>
                     </div>
 
                     <div class="card">
                         <div class="card-header">
-                            <center>
-                                <a class="btn text-info" data-bs-toggle="collapse" href="#collapseTwo">
-                                    Scoring Mangement
-                                </a>
-                            </center>
+                            <a class="btn text-info" data-bs-toggle="collapse" href="#collapseTwo">
+                                Scoring Mangement
+                            </a>
                         </div>
                         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
@@ -57,11 +53,9 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <center>
-                                <a class="btn text-success" data-bs-toggle="collapse" href="#collapseThree">
-                                    Student Absent
-                                </a>
-                            </center>
+                            <a class="btn text-success" data-bs-toggle="collapse" href="#collapseThree">
+                                Student Absent
+                            </a>
                         </div>
                         <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
                             <div class="card-body">
@@ -77,25 +71,21 @@
             <div class="col-sm" style="background-color: #e6ffff;">
                 <div class="row">
                     <h4 class="text-center text-danger"></h4>
-                    <div class="content">
-                        <div class="col-sm " style="background-color: #e6ffff; width: 50%; ">
-                            <h4 class="text-center text-danger mt-3">Admin Dashboard</h4>
-                            <div class="row">
-                                <div class="col rounded bg-success p-5  text-white m-2 btn "
-                                    style="width: 500px; height: 100px; ">
-                                    <h5></h5>
-                                </div>
-                                <div class="col rounded bg-success p-5  text-white m-2 btn"
-                                    style="width: 500px; height: 100px; ">
-                                    <h5></h5>
-                                </div>
-                                <div class="col rounded bg-success p-5 text-white m-2 btn"
-                                    style="width: 500px; height: 100px; ">
-                                    <h5></h5>
-                                </div>
-                                <div class="col rounded bg-success p-5 text-white m-2 btn"
-                                    style="width: 500px; height: 100px; ">
-                                    <h5></h5>
+                    <div class="content ">
+                        <div class="col-sm " style="background-color: #e6ffff;">
+                            <h4 class="text-center text-danger mt-3">Add Grade</h4>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label class="">រៀនថ្នាក់</label>
+                                    <select name="grade" class="form-control">
+                                        <option value="ថ្នាក់បរិញ្ញាបត្រ">ថ្នាក់បរិញ្ញាប័ត្រ</option>
+                                        <option value="ថ្នាក់បរិញ្ញាបត្ររង">ថ្នាក់បរិញ្ញាប័ត្ររង</option>
+                                        <option value="ថ្នាក់បណ្ឌិត">ថ្នាក់បណ្ឌិត</option>
+                                        <option value="ថ្នាក់អនុបណ្ឌិត">ថ្នាក់អនុបណ្ឌិត</option>
+                                    </select><br>
+                                    <div>
+                                        <input class="top btn btn-primary" type="submit" name="submit" value="save">
+                                    </div>
                                 </div>
                             </div>
                         </div>
