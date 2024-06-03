@@ -26,6 +26,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <style>
      label {
@@ -35,7 +36,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
      .table {
           width: 100%;
      }
-     th{
+
+     th {
           background-color: #0066cc;
           color: white;
      }
@@ -45,14 +47,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
      <div>
           <div class="content">
-               <center><h4>View Student</h4></center>
+               <center>
+                    <h4>View Student</h4>
+               </center>
                <?php
                if ($_SESSION['message']) {
                     echo $_SESSION['message'];
                }
                unset($_SESSION['message']);
                ?>
-               <table border="1px" class="table table-bordered" id="myTable" style='font-family: Times New Roman, Times, serif ; font-size: 14px;' >
+               <table id="myTable" border="1px" class="table table-bordered"
+                    style='font-family: Times New Roman, Times, serif ; font-size: 14px;'>
                     <tr>
                          <th class="table_th">អត្តលេខ</th>
                          <th class="table_th">ឈ្មោះ</th>
@@ -116,6 +121,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                               </td>
                               <td class="table_td">
                                    <?php echo "<a href='update.php?student_id={$info['id']}' class='btn btn-success'>Update</a>" ?>
+                                  
                               </td>
                          </tr>
                          <tr>
@@ -126,14 +132,33 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     ?>
                </table>
           </div>
-
+          
      </div>
      <h1>
           <?php echo $_SESSION['name']; ?>
      </h1>
-     
+
 </body>
 <script>
-          
-     </script>
+    
+     function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+               td = tr[i].getElementsByTagName("td")[0];
+               if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                         tr[i].style.display = "";
+                    } else {
+                         tr[i].style.display = "none";
+                    }
+               }
+          }
+     }      
+</script>
+
 </html>

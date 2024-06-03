@@ -9,7 +9,7 @@ $id = $_GET['student_id'];
 $sql = "SELECT * FROM user WHERE id='$id'";
 $result = mysqli_query($conn, $sql);
 $info = $result->fetch_assoc();
-if (isset($_POST['update'])) {
+if (isset($_POST["update"])) {
      $s_id = $_POST['s_id'];
      $username = $_POST["username"];
      $email = $_POST["email"];
@@ -23,7 +23,7 @@ if (isset($_POST['update'])) {
      $grade = $_POST['grade'];
      $shift = $_POST['shift'];
      $usertype = "student";
-     $query = "UPDATE user SET username='$username',email='$email',phone='$phone', gender='$gender',age='$age',dat='$dat',birth='$birth',addres='$addres',skill='$skill',grade='$grade',shift='$shift',S_id='$s_id' WHERE id='$id'";
+     $query = "UPDATE user SET username='$username',email='$email',phone='$phone', gender='$gender',age='$age',dat='$dat',birth='$birth',addres='$addres',skill='$skill',grade='$grade',shift='$shift',s_id='$s_id' WHERE id='$id'";
      $result2 = mysqli_query($conn, $query);
      if ($result2) {
           header("location: update.php");
@@ -37,7 +37,7 @@ if (isset($_POST['update'])) {
 error_reporting(0);
 session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
-     header("Location: index.php");
+     header("Location: update.php");
      exit();
 }
 
@@ -49,9 +49,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 <body>
 
-     <header class="header">
-          <a href="">Update Student</a>
-     </header>
 
      <div>
           <div class="container-fluid">
@@ -114,13 +111,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     </div>
                     <div class="col-sm" style="background-color: #e6ffff;">
                          <div class="row">
-                              <center>
+                              
                               <div class="content">
-                                   <h4>Update Student</h4>
+                                   <h3>Update Student</h3>
                                    <div class="dev_deg">
                                         <form action="#" method="POST">
                                              <div>
-                                                  <label>អត្តលេខសិស្ស</label>
+                                                  <label>Username</label>
                                                   <input type="text" name="s_id"
                                                        value="<?php echo "{$info['s_id']}"; ?>">
                                              </div>
@@ -187,7 +184,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         </form>
                                    </div>
                               </div>
-                              </center>
                          </div>
                     </div>
                </div>

@@ -30,7 +30,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="btn text-primary" data-bs-toggle="collapse" href="#collapseOne">
-                                Student Management
+                            ការគ្រប់គ្រងនិស្សិត
                             </a>
                         </div>
                         <?php include "list_conten.php" ?>
@@ -39,7 +39,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="btn text-info" data-bs-toggle="collapse" href="#collapseTwo">
-                                Scoring Mangement
+                            ការគ្រប់គ្រងពិន្ទុ
                             </a>
                         </div>
                         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
@@ -54,7 +54,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="btn text-success" data-bs-toggle="collapse" href="#collapseThree">
-                                Student Absent
+                            សិស្សអវត្តមាន
                             </a>
                         </div>
                         <div id="collapseThree" class="collapse" data-bs-parent="#accordion">

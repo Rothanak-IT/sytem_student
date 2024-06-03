@@ -30,7 +30,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="btn text-primary" data-bs-toggle="collapse" href="#collapseOne">
-                                Student Management
+                            ការគ្រប់គ្រងនិស្សិត
                             </a>
                         </div>
                         <?php include "list_conten.php" ?>
@@ -39,7 +39,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="btn text-info" data-bs-toggle="collapse" href="#collapseTwo">
-                                Scoring Mangement
+                            ការគ្រប់គ្រងពិន្ទុ
                             </a>
                         </div>
                         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
@@ -54,7 +54,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="btn text-success" data-bs-toggle="collapse" href="#collapseThree">
-                                Student Absent
+                                សិស្សអវត្តមាន
                             </a>
                         </div>
                         <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
@@ -74,7 +74,7 @@
                     <div class="content ">
                         <div class="col-sm " style="background-color: #e6ffff;">
                             <h4 class="text-center text-danger mt-3">Add Gender</h4>
-                            <div class="row mb-3">
+                            <div class="row mb-9">
                                 <div class="col">
                                     <label class="form-label">ភេទ</label>
                                     <select name="gender" class="form-control">
@@ -83,7 +83,8 @@
                                         <option value="ផ្សេងៗ">ផ្សេងៗ</option>
                                     </select><br>
                                     <div>
-                                        <input class="btn btn-primary" type="submit" name="submit" value="save">
+                                        <input class="top btn btn-primary" type="submit" name="submit"
+                                            value="Add Student">
                                     </div>
                                 </div>
                             </div>

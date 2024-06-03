@@ -74,7 +74,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <div class="card"  >
                         <div class="card-header">
                             <a class="btn text-primary" data-bs-toggle="collapse" href="#collapseOne">
-                                Student Management
+                            ការគ្រប់គ្រងនិស្សិត
                             </a>
                         </div>
                         <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
@@ -85,7 +85,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <div class="card">
                         <div class="card-header">
                             <a class="btn text-info" data-bs-toggle="collapse" href="#collapseTwo">
-                                Scoring Mangement
+                            ការគ្រប់គ្រងពិន្ទុ
                             </a>
                         </div>
                         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
@@ -100,7 +100,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <div class="card">
                         <div class="card-header">
                             <a class="btn text-success" data-bs-toggle="collapse" href="#collapseThree">
-                                Student Absent
+                            សិស្សអវត្តមាន
                             </a>
                         </div>
                         <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
@@ -120,7 +120,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <div class="content">
                         <div class="container d-flex justify-content-center">
                             <center>
-                                <h5>Add Student</h5>
+                                <h5>បញ្ចូលឈ្មោះ​សិស្ស</h5>
 
                                 <form action="#" method="POST">
                                     <div class="row mb-3">
@@ -203,7 +203,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         </div>
                                     <div>
                                         <input class="top btn btn-primary" type="submit" name="submit"
-                                            value="Add Student">
+                                            value="បញ្ចូលសិស្ស">
                                     </div>
 
                                 </form><br><br><br><br>
