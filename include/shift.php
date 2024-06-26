@@ -4,18 +4,18 @@ $unmae = "root";
 $password = "";
 $db_name = "student_db";
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
-if (isset($_POST["btnsave"])) {
+if (isset($_POST["tsave"])) {
     $username = $_POST["username"];
-    $gender = $_POST["gender"];
+    $shift = $_POST["shift"];
     $result = "";
 
-    $check = "SELECT*FROM tb_gender";
+    $check = "SELECT*FROM tb_shift";
     $check_user = mysqli_query($conn, $check);
     $row_count = mysqli_num_rows($check_user);
     if ($row_count == 6) {
         echo "<script type='text/javascript'>alert('Username Already Exist. Try Another One');</script>";
     } else {
-        $sql = "INSERT INTO tb_gender(username,gender) VALUES ('$username','$gender')";
+        $sql = "INSERT INTO tb_shift(username,shift) VALUES ('$username','$shift')";
         $result = mysqli_query($conn, $sql);
     }
     if ($result) {
@@ -29,7 +29,7 @@ if (isset($_POST["btnsave"])) {
 session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
-    header("Location: gender_tb.php");
+    header("Location: shift_tb.php");
     exit();
 
 }
@@ -175,27 +175,30 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </div>
     </div>
     <di class="conten">
-        <center >
-            <form action="" method="post" style=" width: 60%; " >
-                <h3 class=" mt-3">បញ្ចូល​ភេទសិស្ស</h3>
+        <center>
+            <form action="" method="post" style=" width: 60%; ">
+                <h3 class=" mt-3">បញ្ចូល​ថ្នាក់រៀនសិស្ស</h3>
                 <div class="row ">
                     <div class="col">
                         <label class="form-label" style="float: left;">ឈ្មោះ</label>
                         <input type="text" class="form-control" name="username" placeholder="">
                     </div>
                     <div class="col">
-                        <label class="form-label" style="float: left;">ភេទ</label>
-                        <select name="gender" class="form-control">
-                            <option value="ប្រុស">ប្រុស</option>
-                            <option value="ស្រី">ស្រី</option>
-                            <option value="ផ្សេងៗ">ផ្សេងៗ</option>
-                        </select>
+                                                <label class="form-label" style="float: left;">ម៉ោង</label>
+                                                <select name="shift" class="form-control">
+                                                    <option value="វេនព្រឹក">វេនព្រឹក</option>
+                                                    <option value="វេនរសៀល">វេនរសៀល</option>
+                                                    <option value="វេនយប់">វេនយប់</option>
+                                                    <option value="វិស្វកម្មសំណង់សុីវិល">វេន​ សៅរ៍-អាទិត្យ</option>
+                                                </select>
+                                            </div>
+                </div>
 
-                    </div>
+                </div>
                 </div><br>
-                <button class="btn btn-primary" name="btnsave">save</button>
+                <button class="btn btn-primary" name="tsave">save</button>
                 <br><br>
-                <?php include "gender_tb.php" ?>
+                <?php include "shift_tb.php" ?>
             </form>
         </center>
         </div>

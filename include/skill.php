@@ -1,21 +1,23 @@
+
+
 <?php
 $sname = "localhost";
 $unmae = "root";
 $password = "";
 $db_name = "student_db";
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
-if (isset($_POST["btnsave"])) {
+if (isset($_POST["bsave"])) {
     $username = $_POST["username"];
-    $gender = $_POST["gender"];
+    $skill = $_POST["skill"];
     $result = "";
 
-    $check = "SELECT*FROM tb_gender";
+    $check = "SELECT*FROM tb_skill";
     $check_user = mysqli_query($conn, $check);
     $row_count = mysqli_num_rows($check_user);
     if ($row_count == 6) {
         echo "<script type='text/javascript'>alert('Username Already Exist. Try Another One');</script>";
     } else {
-        $sql = "INSERT INTO tb_gender(username,gender) VALUES ('$username','$gender')";
+        $sql = "INSERT INTO tb_skill(username,skill) VALUES ('$username','$skill')";
         $result = mysqli_query($conn, $sql);
     }
     if ($result) {
@@ -29,7 +31,7 @@ if (isset($_POST["btnsave"])) {
 session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
-    header("Location: gender_tb.php");
+    header("Location: skill_tb.php");
     exit();
 
 }
@@ -177,25 +179,30 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <di class="conten">
         <center >
             <form action="" method="post" style=" width: 60%; " >
-                <h3 class=" mt-3">បញ្ចូល​ភេទសិស្ស</h3>
+            <h3 class=" mt-3">បញ្ចូល​ជំនាញសិស្ស</h3>
                 <div class="row ">
                     <div class="col">
                         <label class="form-label" style="float: left;">ឈ្មោះ</label>
                         <input type="text" class="form-control" name="username" placeholder="">
                     </div>
                     <div class="col">
-                        <label class="form-label" style="float: left;">ភេទ</label>
-                        <select name="gender" class="form-control">
-                            <option value="ប្រុស">ប្រុស</option>
-                            <option value="ស្រី">ស្រី</option>
-                            <option value="ផ្សេងៗ">ផ្សេងៗ</option>
-                        </select>
+                    <label class="form-label" style="float: left;">ជំនាញ</label>
+                            <select name="skill" class="form-control">
+                                                    <option value="វិស្វកម្មអគ្គិសនី">វិស្វកម្មអគ្គិសនី</option>
+                                                    <option value="វិស្វកម្មអេឡិចត្រូនិច">វិស្វកម្មអេឡិចត្រូនិច</option>
+                                                    <option value="វិស្វកម្មសំណង់សុីវិល">វិស្វកម្មសំណង់សុីវិល</option>
+                                                    <option value="វិស្វកម្មទីផ្សារ">វិស្វកម្មទីផ្សារ</option>
+                                                    <option value="វិស្វកម្ម Accounting">វិស្វកម្ម Accounting</option>
+                                                    <option value="វិស្វកម្មបច្ចេកវិទ្យា">វិស្វកម្មបច្ចេកទេស</option>
+                            </select>     
+                    </div>
+                    </div>         
 
                     </div>
                 </div><br>
-                <button class="btn btn-primary" name="btnsave">save</button>
+                <button class="btn btn-primary" name="bsave">save</button>
                 <br><br>
-                <?php include "gender_tb.php" ?>
+                <?php include "skill_tb.php" ?>
             </form>
         </center>
         </div>

@@ -19,6 +19,7 @@ if (isset($_POST["submit"])) {
     $shift = $_POST['shift'];
     $usertype = "student";
     $result = "";
+
     $check = "SELECT*FROM user WHERE username='$username'";
     $check_user = mysqli_query($conn, $check);
     $row_count = mysqli_num_rows($check_user);
@@ -51,81 +52,169 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Document</title>
 </head>
 <style>
-    .top {
-        float: left;
-    }
+          * {
+               font-family: 'Khmer OS Muol, khmer OS';
+          }
 
-</style>
+          body {
+               width: 100%;
+               height: 100vh;
+               background-color: #34495e;
+               position: relative;
+               font-family: 'Khmer OS Muol, khmer OS';
+          }
+
+          .sidenav {
+               height: 100%;
+               height: 761px;
+               /* position: fixed; */
+               z-index: 1;
+               top: 13%;
+               left: 0;
+               background-color: #111;
+               overflow-x: hidden;
+               /* padding-top: 20px; */
+          }
+
+
+          .sidenav a,
+          .dropdown-btn {
+               padding: 6px 8px 6px 16px;
+               text-decoration: none;
+               font-size: 20px;
+               color: #818181;
+               display: block;
+               border: none;
+               background: none;
+               width: 100%;
+               text-align: left;
+               cursor: pointer;
+               outline: none;
+          }
+
+
+          .sidenav a:hover,
+          .dropdown-btn:hover {
+               color: #f2f2f2;
+
+          }
+
+          .main {
+               /* margin-left: 134px; */
+               font-size: 20px;
+               padding: 15px;
+               background-color: #04AA6D;
+               width: 1985px;
+          }
+
+
+          .active {
+               background-color: green;
+               color: white;
+          }
+
+
+          .dropdown-container {
+               display: none;
+               background-color: #262626;
+               padding-left: 8px;
+          }
+
+
+          .fa-caret-down {
+               float: right;
+               padding-right: 8px;
+          }
+
+
+          @media screen and (max-height: 450px) {
+               .sidenav {
+                    padding-top: 15px;
+                    
+               }
+
+               .sidenav a {
+                    font-size: 18px;
+               }
+          }
+
+        
+          button {
+               float: right;
+               margin-left: 30px;
+          }
+
+         
+
+          .rounded {
+               background-color: #cccccc;
+          }
+
+          .rounded:hover {
+               background-color: #8080ff;
+          }
+
+          label {
+               color: #ffffff;
+          }
+
+          h3 {
+               color: #ffffff;
+          }
+          i{
+            color: #ffffff;
+          }
+          .dd{
+            
+            display: flex;
+           
+          }
+     </style>
+
 
 <body>
     <div class="container-fluid">
-        <?php include "logout.php" ?>
-        <div class="row p-0 m-3">
-            <div class="col-sm-3" style=" background-color:  #99d6ff; ">
-                <div id="accordion">
-                    <div class="card"  >
-                        <div class="card-header">
-                            <a class="btn text-primary" data-bs-toggle="collapse" href="#collapseOne">
-                            ការគ្រប់គ្រងនិស្សិត
-                            </a>
-                        </div>
-                        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-                            <?php include "list_conten.php" ?>
-                        </div>
-                    </div>
 
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="btn text-info" data-bs-toggle="collapse" href="#collapseTwo">
-                            ការគ្រប់គ្រងពិន្ទុ
-                            </a>
-                        </div>
-                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item btn btn-primary text-primary">Score Students</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="btn text-success" data-bs-toggle="collapse" href="#collapseThree">
-                            សិស្សអវត្តមាន
-                            </a>
-                        </div>
-                        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item btn btn-primary text-primary">Absent Student</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="row">
+            <div class="main">
+                <center>
+                    <h3><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
+                            href="">Logout</a></h3>
+                </center>
             </div>
-            <div class="col-sm" style="background-color: #f0f0f5; height: 520px; ">
-                <div class="row ">
-                    <h4 class="text-center text-danger"></h4>
-                    <div class="content">
-                        <div class="container d-flex justify-content-center">
+            
+        </div>
+        
+    </div>
+    
+    <div>
+        <div class="conten dd">
+        <?php include "list_conten.php" ?>
+        
+            <center>
+                <div class="content" >
+                    
+                    <div class="col">
+                        <header>
                             <center>
-                                <h5>បញ្ចូលឈ្មោះ​សិស្ស</h5>
-
-                                <form action="#" method="POST">
-                                    <div class="row mb-3">
+                                <h3><i class="fas fa-user-graduate"></i> បញ្ចូលឈ្មោះ​សិស្ស</h3>
+                            </center>
+                        </header><br><br>
+                        <div class="w3-container p-2 " style="margin-left: 119px" >
+                            <center>
+                                <form action="#" method="POST" >
+                                    <div class="row mb-3" >
                                         <div class="col">
-                                            <label class="form-label" style="float: left;" >អត្តលេខសិស្ស</label>
+                                            <label class="form-label" style="float: left;">អត្តលេខសិស្ស</label>
                                             <input type="text" class="form-control" name="s_id" placeholder="">
                                         </div>
                                         <div class="col">
@@ -134,12 +223,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         </div>
 
                                         <div class="col">
-                                            <label class="form-label"style="float: left;">អ៊ីមែល</label>
+                                            <label class="form-label" style="float: left;">អ៊ីមែល</label>
                                             <input type="text" class="form-control" name="email" placeholder="">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                    <div class="col">
+                                        <div class="col">
                                             <label class="form-label" style="float: left;">លេខទូរស័ព្ទ</label>
                                             <input type="text" class="form-control" name="phone" placeholder="">
                                         </div>
@@ -157,7 +246,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                    <div class="col">
+                                        <div class="col">
                                             <label class="form-label" style="float: left;">ថ្ងៃខែឆ្នាំកំណើត</label>
                                             <input type="date" class="form-control" name="dat" placeholder="">
                                         </div>
@@ -170,7 +259,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                             <input type="text" class="form-control" name="addres" placeholder="">
                                         </div>
                                     </div>
-                                        <div class="row mb-3">
+                                    <div class="row mb-3">
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ជំនាញ</label>
                                             <select name="skill" class="form-control">
@@ -200,26 +289,149 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                                 <option value="វិស្វកម្មសំណង់សុីវិល">វេន​ សៅរ៍-អាទិត្យ</option>
                                             </select>
                                         </div>
-                                        </div>
-                                    <div>
+                                    </div>
+                                    <div class="" style=" float: right; ">
                                         <input class="top btn btn-primary" type="submit" name="submit"
                                             value="បញ្ចូលសិស្ស">
+                                        <!-- <input class="btn btn-danger" type="submit" name="close" value="បិទ"> -->
                                     </div>
 
-                                </form><br><br><br><br>
-                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." class="form-control" style=" width: 30%; float: right; "><br>
-                                
+                                </form>
                         </div>
-                        
-                        </center>
+            </center>
+            
+        </div>
+        
+        </center>
+    </div>
+    <?php include 'viewstudent.php' ?>
+    <!-- <div class="row ">
+                <h4 class="text-center text-danger"></h4>
+                <div class="content">
+                   
+                    <div id="id01" class="w3-modal demo">
+                        <div class="w3-modal-content w3-card-2"style='width: 1073px ' >
+                            <header class="w3-container w3-teal">
+                                <span onclick="document.getElementById('id01').style.display='none'"
+                                    class="w3-button w3-display-topright">&times;</span>
+                                <center><h5>បញ្ចូលឈ្មោះ​សិស្ស</h5></center>
+                            </header>
+                            <div class="w3-container p-2 ">
+                                <center>
+                                    <form action="#" method="POST">
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">អត្តលេខសិស្ស</label>
+                                                <input type="text" class="form-control" name="s_id" placeholder="">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">ឈ្មោះ</label>
+                                                <input type="text" class="form-control" name="username" placeholder="">
+                                            </div>
+
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">អ៊ីមែល</label>
+                                                <input type="text" class="form-control" name="email" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">លេខទូរស័ព្ទ</label>
+                                                <input type="text" class="form-control" name="phone" placeholder="">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">ភេទ</label>
+                                                <select name="gender" class="form-control">
+                                                    <option value="ប្រុស">ប្រុស</option>
+                                                    <option value="ស្រី">ស្រី</option>
+                                                    <option value="ផ្សេងៗ">ផ្សេងៗ</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">អាយុ</label>
+                                                <input type="number" class="form-control" name="age" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">ថ្ងៃខែឆ្នាំកំណើត</label>
+                                                <input type="date" class="form-control" name="dat" placeholder="">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">ទីកន្លែងកំណើត</label>
+                                                <input type="text" class="form-control" name="birth" placeholder="">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">អាស័យដ្ថាន</label>
+                                                <input type="text" class="form-control" name="addres" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">ជំនាញ</label>
+                                                <select name="skill" class="form-control">
+                                                    <option value="វិស្វកម្មអគ្គិសនី">វិស្វកម្មអគ្គិសនី</option>
+                                                    <option value="វិស្វកម្មអេឡិចត្រូនិច">វិស្វកម្មអេឡិចត្រូនិច</option>
+                                                    <option value="វិស្វកម្មសំណង់សុីវិល">វិស្វកម្មសំណង់សុីវិល</option>
+                                                    <option value="វិស្វកម្មទីផ្សារ">វិស្វកម្មទីផ្សារ</option>
+                                                    <option value="វិស្វកម្ម Accounting">វិស្វកម្ម Accounting</option>
+                                                    <option value="វិស្វកម្មបច្ចេកវិទ្យា">វិស្វកម្មបច្ចេកទេស</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="" style="float: left;">រៀនថ្នាក់</label>
+                                                <select name="grade" class="form-control">
+                                                    <option value="ថ្នាក់បរិញ្ញាបត្រ">ថ្នាក់បរិញ្ញាប័ត្រ</option>
+                                                    <option value="ថ្នាក់បរិញ្ញាបត្ររង">ថ្នាក់បរិញ្ញាប័ត្ររង</option>
+                                                    <option value="ថ្នាក់បណ្ឌិត">ថ្នាក់បណ្ឌិត</option>
+                                                    <option value="ថ្នាក់អនុបណ្ឌិត">ថ្នាក់អនុបណ្ឌិត</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" style="float: left;">ម៉ោង</label>
+                                                <select name="shift" class="form-control">
+                                                    <option value="វេនព្រឹក">វេនព្រឹក</option>
+                                                    <option value="វេនរសៀល">វេនរសៀល</option>
+                                                    <option value="វេនយប់">វេនយប់</option>
+                                                    <option value="វិស្វកម្មសំណង់សុីវិល">វេន​ សៅរ៍-អាទិត្យ</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="" style=" float: right; " >
+                                            <input class="top btn btn-primary" type="submit" name="submit"
+                                                value="បញ្ចូលសិស្ស">
+                                                <input class="btn btn-danger" type="submit" name="close"
+                                                value="បិទ">
+                                        </div>
+
+                                    </form>
+                            </div>
+                            </center>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-            <?php include 'viewstudent.php' ?>
-        </div>
+                
+            </div> -->
     </div>
     </div>
+    <script>
 
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

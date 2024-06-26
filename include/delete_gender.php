@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 $sname= "localhost";
@@ -10,11 +8,11 @@ $result = '';
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 if($_GET['id']){
     $user_id=$_GET['id'];
-    $sql="DELETE FROM user WHERE id='$user_id'";
+    $sql="DELETE FROM tb_gender WHERE id='$user_id'";
     $result = mysqli_query($conn,$sql);
     if($result){
         $_SESSION['message']='<center><p style="color: green;" >Delete Student is Successfully</p></center>';
-        header("location: addstudent.php");
+        header("location: gender.php");
     } 
 }
 ?>
