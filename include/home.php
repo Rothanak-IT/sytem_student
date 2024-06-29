@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
     * {
-      font-family: 'Khmer OS Muol, khmer OS';
+      font-family: 'Khmer OS Battambang';
     }
 
     body {
@@ -19,7 +19,7 @@
       height: 100vh;
       background-color: #34495e;
       position: relative;
-      font-family: 'Khmer OS Muol, khmer OS';
+      font-family: 'Khmer OS Battambang';
     }
 
     .sidenav {
@@ -33,8 +33,6 @@
       overflow-x: hidden;
       padding-top: 20px;
     }
-
-
     .sidenav a,
     .dropdown-btn {
       padding: 6px 8px 6px 16px;
@@ -160,12 +158,6 @@
         </div>
       </div>
     </center>
-  </div>
-  </div>
-  </div>
-  </center>
-
-  </center>
   </div>
   <script>
 

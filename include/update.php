@@ -40,11 +40,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html>
-
 <head>
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -57,7 +54,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           * {
                font-family: 'Khmer OS Muol, khmer OS';
           }
-
           body {
                width: 100%;
                height: 100vh;
@@ -65,7 +61,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                position: relative;
                font-family: 'Khmer OS Muol, khmer OS';
           }
-
           .sidenav {
                height: 100%;
                width: 250px;
@@ -187,8 +182,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                               <center><h3>​<i class="fas fa-user-graduate"></i> កែប្រែព័ត៌មានសិស្ស</h3></center>
                                    <div class="row" style=" margin-left: 90px; " >
 
-                                   
-                                             
                                              <form action="#" method="POST">
                                                   
                                                   <div class="row mb-3">

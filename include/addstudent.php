@@ -215,22 +215,22 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <div class="row mb-3" >
                                         <div class="col">
                                             <label class="form-label" style="float: left;">អត្តលេខសិស្ស</label>
-                                            <input type="text" class="form-control" name="s_id" placeholder="">
+                                            <input type="text" class="form-control" name="s_id" required >
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ឈ្មោះ</label>
-                                            <input type="text" class="form-control" name="username" placeholder="">
+                                            <input type="text" class="form-control" name="username" required >
                                         </div>
 
                                         <div class="col">
                                             <label class="form-label" style="float: left;">អ៊ីមែល</label>
-                                            <input type="text" class="form-control" name="email" placeholder="">
+                                            <input type="text" class="form-control" name="email" required >
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
                                             <label class="form-label" style="float: left;">លេខទូរស័ព្ទ</label>
-                                            <input type="text" class="form-control" name="phone" placeholder="">
+                                            <input type="text" class="form-control" name="phone" required >
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ភេទ</label>
@@ -242,27 +242,27 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">អាយុ</label>
-                                            <input type="number" class="form-control" name="age" placeholder="">
+                                            <input type="number" class="form-control" name="age" required >
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ថ្ងៃខែឆ្នាំកំណើត</label>
-                                            <input type="date" class="form-control" name="dat" placeholder="">
+                                            <input type="date" class="form-control" name="dat" required >
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ទីកន្លែងកំណើត</label>
-                                            <input type="text" class="form-control" name="birth" placeholder="">
+                                            <input type="text" class="form-control" name="birth" required >
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">អាស័យដ្ថាន</label>
-                                            <input type="text" class="form-control" name="addres" placeholder="">
+                                            <input type="text" class="form-control" name="addres" required >
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ជំនាញ</label>
-                                            <select name="skill" class="form-control">
+                                            <select name="skill" class="form-control" required>
                                                 <option value="វិស្វកម្មអគ្គិសនី">វិស្វកម្មអគ្គិសនី</option>
                                                 <option value="វិស្វកម្មអេឡិចត្រូនិច">វិស្វកម្មអេឡិចត្រូនិច</option>
                                                 <option value="វិស្វកម្មសំណង់សុីវិល">វិស្វកម្មសំណង់សុីវិល</option>
@@ -273,7 +273,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         </div>
                                         <div class="col">
                                             <label class="" style="float: left;">រៀនថ្នាក់</label>
-                                            <select name="grade" class="form-control">
+                                            <select name="grade" class="form-control" required>
                                                 <option value="ថ្នាក់បរិញ្ញាបត្រ">ថ្នាក់បរិញ្ញាប័ត្រ</option>
                                                 <option value="ថ្នាក់បរិញ្ញាបត្ររង">ថ្នាក់បរិញ្ញាប័ត្ររង</option>
                                                 <option value="ថ្នាក់បណ្ឌិត">ថ្នាក់បណ្ឌិត</option>
@@ -282,7 +282,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ម៉ោង</label>
-                                            <select name="shift" class="form-control">
+                                            <select name="shift" class="form-control" required>
                                                 <option value="វេនព្រឹក">វេនព្រឹក</option>
                                                 <option value="វេនរសៀល">វេនរសៀល</option>
                                                 <option value="វេនយប់">វេនយប់</option>
@@ -322,7 +322,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         <div class="row mb-3">
                                             <div class="col">
                                                 <label class="form-label" style="float: left;">អត្តលេខសិស្ស</label>
-                                                <input type="text" class="form-control" name="s_id" placeholder="">
+                                                <input type="text" class="form-control" name="s_id" required >
                                             </div>
                                             <div class="col">
                                                 <label class="form-label" style="float: left;">ឈ្មោះ</label>
