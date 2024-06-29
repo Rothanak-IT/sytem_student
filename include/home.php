@@ -129,7 +129,7 @@
       <div class="main">
         <center>
           <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
-              href="index.php">Logout</a></h3>
+              href="index.php"><button class="btn btn-primary" >Logout</button></a></h3>
         </center>
        
       </div>

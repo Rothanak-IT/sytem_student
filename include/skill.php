@@ -1,5 +1,3 @@
-
-
 <?php
 $sname = "localhost";
 $unmae = "root";
@@ -100,7 +98,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             /* margin-left: 134px; */
             font-size: 20px;
             padding: 15px;
-          
+
             width: 1985px;
         }
 
@@ -161,9 +159,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         label {
             color: #ffffff;
         }
-        i{
-      color: blue;
-    }
+
+        i {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -172,8 +171,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <div class="row">
             <div class="main" style="  background-color: #cccccc;">
                 <center>
-                    <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
-                            href="">Logout</a></h3>
+                    <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png"
+                            alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a
+                            style=" float: right; " href=""><button class="btn btn-primary" >Logout</button></a></h3>
                 </center>
             </div>
             <div class="sidenav" style="height:560px; top: 18%;">
@@ -224,28 +224,28 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </div>
     </div>
     <di class="conten">
-        <center >
-            <form action="" method="post" style=" width: 60%; " >
-            <h4 style=" font-size: 25px; font-weight: bold; color: white; " class=" mt-3">បញ្ចូល​ជំនាញសិស្ស</h4>
+        <center>
+            <form action="" method="post" style=" width: 60%; ">
+                <h4 style=" font-size: 25px; font-weight: bold; color: white; " class=" mt-3">បញ្ចូល​ជំនាញសិស្ស</h4>
                 <div class="row ">
                     <div class="col">
                         <label class="form-label" style="float: left;">ឈ្មោះ</label>
                         <input type="text" class="form-control" name="username" placeholder="">
                     </div>
                     <div class="col">
-                    <label class="form-label" style="float: left;">ជំនាញ</label>
-                            <select name="skill" class="form-control">
-                                                    <option value="វិស្វកម្មអគ្គិសនី">វិស្វកម្មអគ្គិសនី</option>
-                                                    <option value="វិស្វកម្មអេឡិចត្រូនិច">វិស្វកម្មអេឡិចត្រូនិច</option>
-                                                    <option value="វិស្វកម្មសំណង់សុីវិល">វិស្វកម្មសំណង់សុីវិល</option>
-                                                    <option value="វិស្វកម្មទីផ្សារ">វិស្វកម្មទីផ្សារ</option>
-                                                    <option value="វិស្វកម្ម Accounting">វិស្វកម្ម Accounting</option>
-                                                    <option value="វិស្វកម្មបច្ចេកវិទ្យា">វិស្វកម្មបច្ចេកទេស</option>
-                            </select>     
+                        <label class="form-label" style="float: left;">ជំនាញ</label>
+                        <select name="skill" class="form-control">
+                            <option value="វិស្វកម្មអគ្គិសនី">វិស្វកម្មអគ្គិសនី</option>
+                            <option value="វិស្វកម្មអេឡិចត្រូនិច">វិស្វកម្មអេឡិចត្រូនិច</option>
+                            <option value="វិស្វកម្មសំណង់សុីវិល">វិស្វកម្មសំណង់សុីវិល</option>
+                            <option value="វិស្វកម្មទីផ្សារ">វិស្វកម្មទីផ្សារ</option>
+                            <option value="វិស្វកម្ម Accounting">វិស្វកម្ម Accounting</option>
+                            <option value="វិស្វកម្មបច្ចេកវិទ្យា">វិស្វកម្មបច្ចេកទេស</option>
+                        </select>
                     </div>
-                    </div>         
+                </div>
 
-                    </div>
+                </div>
                 </div><br>
                 <button class="btn btn-primary" name="bsave">save</button>
                 <br><br>
