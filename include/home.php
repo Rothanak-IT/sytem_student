@@ -27,7 +27,7 @@
       width: 250px;
       position: fixed;
       z-index: 1;
-      top: 13%;
+      top: 18%;
       left: 0;
       background-color: #111;
       overflow-x: hidden;
@@ -125,10 +125,12 @@
     <div class="row">
       <div class="main">
         <center>
-          <h3><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
+          <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
               href="index.php">Logout</a></h3>
         </center>
+       
       </div>
+      
       <?php include "list_conten.php" ?>
     </div>
   </div>

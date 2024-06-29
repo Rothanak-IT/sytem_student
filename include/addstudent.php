@@ -19,7 +19,6 @@ if (isset($_POST["submit"])) {
     $shift = $_POST['shift'];
     $usertype = "student";
     $result = "";
-
     $check = "SELECT*FROM user WHERE username='$username'";
     $check_user = mysqli_query($conn, $check);
     $row_count = mysqli_num_rows($check_user);
@@ -44,7 +43,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     exit();
 
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +62,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           * {
                font-family: 'Khmer OS Muol, khmer OS';
           }
-
           body {
                width: 100%;
                height: 100vh;
@@ -72,20 +69,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                position: relative;
                font-family: 'Khmer OS Muol, khmer OS';
           }
-
           .sidenav {
                height: 100%;
                height: 761px;
                /* position: fixed; */
                z-index: 1;
-               top: 13%;
+               top: 18%;
                left: 0;
                background-color: #111;
                overflow-x: hidden;
                /* padding-top: 20px; */
           }
-
-
           .sidenav a,
           .dropdown-btn {
                padding: 6px 8px 6px 16px;
@@ -100,14 +94,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                cursor: pointer;
                outline: none;
           }
-
-
           .sidenav a:hover,
           .dropdown-btn:hover {
                color: #f2f2f2;
 
           }
-
           .main {
                /* margin-left: 134px; */
                font-size: 20px;
@@ -115,27 +106,19 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                background-color: #04AA6D;
                width: 1985px;
           }
-
-
           .active {
                background-color: green;
                color: white;
           }
-
-
           .dropdown-container {
                display: none;
                background-color: #262626;
                padding-left: 8px;
           }
-
-
           .fa-caret-down {
                float: right;
                padding-right: 8px;
           }
-
-
           @media screen and (max-height: 450px) {
                .sidenav {
                     padding-top: 15px;
@@ -146,15 +129,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     font-size: 18px;
                }
           }
-
-        
           button {
                float: right;
                margin-left: 30px;
           }
-
-         
-
           .rounded {
                background-color: #cccccc;
           }
@@ -179,27 +157,19 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
            
           }
      </style>
-
-
 <body>
     <div class="container-fluid">
-
         <div class="row">
             <div class="main">
                 <center>
-                    <h3><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
-                            href="">Logout</a></h3>
+                    <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; " href="">Logout</a></h3>
                 </center>
             </div>
-            
         </div>
-        
     </div>
-    
     <div>
         <div class="conten dd">
         <?php include "list_conten.php" ?>
-        
             <center>
                 <div class="content" >
                     
