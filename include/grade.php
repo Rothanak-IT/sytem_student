@@ -99,7 +99,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             /* margin-left: 134px; */
             font-size: 20px;
             padding: 15px;
-            background-color: #04AA6D;
+            background-color: #f2f2f2
             width: 1985px;
         }
 
@@ -154,26 +154,29 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         }
 
         h3 {
-            color: #ffffff;
+            color: black;
         }
 
         label {
             color: #ffffff;
         }
+        i{
+      color: blue;
+    }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="main">
+            <div class="main" style="  background-color: #cccccc;">
                 <center>
                     <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
                             href="">Logout</a></h3>
                 </center>
             </div>
             <div class="sidenav" style="height:560px; top: 18%;">
-                <a href="home.php"><i class="fas fa-home"> ទំព័ដើម</i></a>
+                <a href="home.php"><i class="fas fa-home"></i> ទំព័ដើម</a>
 
                 <button class="dropdown-btn"><i class="fas fa-user-graduate"></i> គ្រប់គ្រងនិស្សិត<i
                         class="fa fa-caret-down"></i></button>
@@ -222,7 +225,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <di class="conten">
         <center >
             <form action="" method="post" style=" width: 60%; " >
-                <h3 class=" mt-3">បញ្ចូល​ថ្នាក់រៀនសិស្ស</h3>
+                <h4 style=" font-size: 25px; font-weight: bold; color: white; " class=" mt-3">បញ្ចូល​ថ្នាក់រៀនសិស្ស</h4>
                 <div class="row ">
                     <div class="col">
                         <label class="form-label" style="float: left;">ឈ្មោះ</label>

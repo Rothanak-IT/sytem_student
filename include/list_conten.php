@@ -1,7 +1,7 @@
 
    
 <div class="sidenav" style="height:560px;" >
-        <a href="home.php"><i class="fas fa-home"> ទំព័ដើម</i></a>
+        <a href="home.php"><i class="fas fa-home"></i> ទំព័ដើម</a>
         
         <button class="dropdown-btn"><i class="fas fa-user-graduate"></i> គ្រប់គ្រងនិស្សិត<i class="fa fa-caret-down"></i></button>
         

@@ -128,7 +128,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
      }
 
      .table_th {
-          color: black;
+          color: white;
      }
 
      .table_name {
@@ -148,7 +148,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
      }
 
      .data {
-          color: white;
+          background-color: white;
      }
     
      td{
@@ -167,7 +167,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           unset($_SESSION['message']);
           ?>
           <table id="myTable" border="1px" class="table_name" border="1" style=" width: 550px; " >
-               <tr class="header">
+               <tr class="header" style=" background-color: #0066cc;">
                     <th class="table_th" style=" width: 15%; ">ល.រ</th>
                     <th class="table_th">ឈ្មោះ</th>
                    

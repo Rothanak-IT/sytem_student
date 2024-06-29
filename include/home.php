@@ -59,7 +59,7 @@
       /* margin-left: 134px; */
       font-size: 20px;
       padding: 15px;
-      background-color: #04AA6D;
+      background-color: #cccccc;
       width: 1985px;
     }
 
@@ -115,7 +115,10 @@
     }
 
     h3 {
-      color: #ffffff;
+      color: black;
+    }
+    i{
+      color: blue;
     }
   </style>
 </head>

@@ -100,7 +100,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                /* margin-left: 134px; */
                font-size: 20px;
                padding: 15px;
-               background-color: #04AA6D;
+               background-color: #cccccc;
                width: 1985px;
           }
 
@@ -158,8 +158,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           }
 
           h3 {
-               color: #ffffff;
+               color: black;
           }
+          i{
+      color: blue;
+    }
      </style>
 </head>
 
@@ -179,7 +182,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           <center>
           <div class="content">
                               <div class="col">
-                              <center><h3>​<i class="fas fa-user-graduate"></i> កែប្រែព័ត៌មានសិស្ស</h3></center>
+                              <center><h4 style=" font-size: 25px; font-weight: bold; color: white;  ">​<i class="fas fa-user-graduate"></i> កែប្រែព័ត៌មានសិស្ស</h4></center>
                                    <div class="row" style=" margin-left: 90px; " >
 
                                              <form action="#" method="POST">

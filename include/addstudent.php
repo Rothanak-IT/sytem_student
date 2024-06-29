@@ -103,7 +103,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                /* margin-left: 134px; */
                font-size: 20px;
                padding: 15px;
-               background-color: #04AA6D;
+                          ;
                width: 1985px;
           }
           .active {
@@ -146,10 +146,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
           }
 
           h3 {
-               color: #ffffff;
+               color: black;
           }
           i{
-            color: #ffffff;
+            color: blue;
           }
           .dd{
             
@@ -160,7 +160,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="main">
+            <div class="main" style=" background-color:   #cccccc;  ">
                 <center>
                     <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; " href="">Logout</a></h3>
                 </center>
@@ -176,7 +176,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <div class="col">
                         <header>
                             <center>
-                                <h3><i class="fas fa-user-graduate"></i> បញ្ចូលឈ្មោះ​សិស្ស</h3>
+                                <h4 style=" font-size: 25px; font-weight: bold; color: white; "><i class="fas fa-user-graduate"></i> បញ្ចូលឈ្មោះ​សិស្ស</h4>
                             </center>
                         </header><br><br>
                         <div class="w3-container p-2 " style="margin-left: 119px" >
