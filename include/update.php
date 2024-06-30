@@ -281,10 +281,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
      </div>
      <script>
-
           var dropdown = document.getElementsByClassName("dropdown-btn");
           var i;
-
           for (i = 0; i < dropdown.length; i++) {
                dropdown[i].addEventListener("click", function () {
                     this.classList.toggle("active");
