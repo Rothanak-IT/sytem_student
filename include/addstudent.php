@@ -59,148 +59,159 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <title>Document</title>
 </head>
 <style>
-          * {
-               font-family: 'Khmer OS Muol, khmer OS';
-          }
-          body {
-               width: 100%;
-               height: 100vh;
-               background-color: #34495e;
-               position: relative;
-               font-family: 'Khmer OS Muol, khmer OS';
-          }
-          .sidenav {
-               height: 100%;
-               height: 761px;
-               /* position: fixed; */
-               z-index: 1;
-               top: 18%;
-               left: 0;
-               background-color: #111;
-               overflow-x: hidden;
-               /* padding-top: 20px; */
-          }
-          .sidenav a,
-          .dropdown-btn {
-               padding: 6px 8px 6px 16px;
-               text-decoration: none;
-               font-size: 20px;
-               color: #818181;
-               display: block;
-               border: none;
-               background: none;
-               width: 100%;
-               text-align: left;
-               cursor: pointer;
-               outline: none;
-          }
-          .sidenav a:hover,
-          .dropdown-btn:hover {
-               color: #f2f2f2;
+    * {
+        font-family: 'Khmer OS Muol, khmer OS';
+    }
 
-          }
-          .main {
-               /* margin-left: 134px; */
-               font-size: 20px;
-               padding: 15px;
-                          ;
-               width: 1985px;
-          }
-          .active {
-               background-color: green;
-               color: white;
-          }
-          .dropdown-container {
-               display: none;
-               background-color: #262626;
-               padding-left: 8px;
-          }
-          .fa-caret-down {
-               float: right;
-               padding-right: 8px;
-          }
-          @media screen and (max-height: 450px) {
-               .sidenav {
-                    padding-top: 15px;
-                    
-               }
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: #34495e;
+        position: relative;
+        font-family: 'Khmer OS Muol, khmer OS';
+    }
 
-               .sidenav a {
-                    font-size: 18px;
-               }
-          }
-          button {
-               float: right;
-               margin-left: 30px;
-          }
-          .rounded {
-               background-color: #cccccc;
-          }
+    .sidenav {
+        height: 100%;
+        height: 761px;
+        /* position: fixed; */
+        z-index: 1;
+        top: 18%;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        /* padding-top: 20px; */
+    }
 
-          .rounded:hover {
-               background-color: #8080ff;
-          }
+    .sidenav a,
+    .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+    }
 
-          label {
-               color: #ffffff;
-          }
+    .sidenav a:hover,
+    .dropdown-btn:hover {
+        color: #f2f2f2;
 
-          h3 {
-               color: black;
-          }
-          i{
-            color: blue;
-          }
-          .dd{
-            
-            display: flex;
-           
-          }
-     </style>
+    }
+
+    .main {
+        /* margin-left: 134px; */
+        font-size: 20px;
+        padding: 15px;
+        ;
+        width: 1985px;
+    }
+
+    .active {
+        background-color: green;
+        color: white;
+    }
+
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+    button {
+        float: right;
+        margin-left: 30px;
+    }
+
+    .rounded {
+        background-color: #cccccc;
+    }
+    .rounded:hover {
+        background-color: #8080ff;
+    }
+    label {
+        color: #ffffff;
+    }
+    h3 {
+        color: black;
+    }
+
+    i {
+        color: blue;
+    }
+    .dd {
+        display: flex;
+    }
+</style>
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="main" style=" background-color:   #cccccc;  ">
                 <center>
-                    <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; " href=""><button class="btn btn-primary" >Logout</button></a></h3>
+                    <h3 class="text-white" style=" font-size: 25px; font-weight: bold; " >
+                        <img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png"
+                            alt=""><i class="fas fa-user-graduate "></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a
+                            style=" float: right; " href="index.php"><button class="btn btn-primary">Logout</button></a>
+                    </h3>
                 </center>
             </div>
         </div>
     </div>
     <div>
         <div class="conten dd">
-        <?php include "list_conten.php" ?>
+            <?php include "list_conten.php" ?>
             <center>
-                <div class="content" >
-                    
+                <div class="content">
+
                     <div class="col">
                         <header>
                             <center>
-                                <h4 style=" font-size: 25px; font-weight: bold; color: white; "><i class="fas fa-user-graduate"></i> បញ្ចូលឈ្មោះ​សិស្ស</h4>
+                                <h4 style=" font-size: 25px; font-weight: bold; color: white; "><i
+                                        class="fas fa-user-graduate"></i> បញ្ចូលឈ្មោះ​សិស្ស</h4>
                             </center>
                         </header><br><br>
-                        <div class="w3-container p-2 " style="margin-left: 119px" >
+                        <div class="w3-container p-2 " style="margin-left: 119px">
                             <center>
-                                <form action="#" method="POST" >
-                                    <div class="row mb-3" >
+                                <form action="#" method="POST">
+                                    <div class="row mb-3">
                                         <div class="col">
                                             <label class="form-label" style="float: left;">អត្តលេខសិស្ស</label>
-                                            <input type="text" class="form-control" name="s_id" required >
+                                            <input type="text" class="form-control" name="s_id" required>
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ឈ្មោះ</label>
-                                            <input type="text" class="form-control" name="username" required >
+                                            <input type="text" class="form-control" name="username" required>
                                         </div>
 
                                         <div class="col">
                                             <label class="form-label" style="float: left;">អ៊ីមែល</label>
-                                            <input type="text" class="form-control" name="email" required >
+                                            <input type="text" class="form-control" name="email" required>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
                                             <label class="form-label" style="float: left;">លេខទូរស័ព្ទ</label>
-                                            <input type="text" class="form-control" name="phone" required >
+                                            <input type="text" class="form-control" name="phone" required>
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ភេទ</label>
@@ -212,21 +223,21 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">អាយុ</label>
-                                            <input type="number" class="form-control" name="age" required >
+                                            <input type="number" class="form-control" name="age" required>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ថ្ងៃខែឆ្នាំកំណើត</label>
-                                            <input type="date" class="form-control" name="dat" required >
+                                            <input type="date" class="form-control" name="dat" required>
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">ទីកន្លែងកំណើត</label>
-                                            <input type="text" class="form-control" name="birth" required >
+                                            <input type="text" class="form-control" name="birth" required>
                                         </div>
                                         <div class="col">
                                             <label class="form-label" style="float: left;">អាស័យដ្ថាន</label>
-                                            <input type="text" class="form-control" name="addres" required >
+                                            <input type="text" class="form-control" name="addres" required>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -269,9 +280,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 </form>
                         </div>
             </center>
-            
         </div>
-        
         </center>
     </div>
     <?php include 'viewstudent.php' ?>
@@ -386,10 +395,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </div>
     </div>
     <script>
-
         var dropdown = document.getElementsByClassName("dropdown-btn");
         var i;
-
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {
                 this.classList.toggle("active");

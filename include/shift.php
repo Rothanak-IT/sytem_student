@@ -170,8 +170,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <div class="row">
             <div class="main" style="  background-color: #cccccc;">
                 <center>
-                    <h3><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
-                            href="">Logout</a></h3>
+                    <h3 style=" font-size: 25px; font-weight: bold; "><img style=" width: 6%; height: 68px; float: left; border-radius: 500px; " src="kossomak.png" alt=""><i class="fas fa-user-graduate"></i> ប្រព័ន្ធគ្រប់គ្រងនិស្សិត <a style=" float: right; "
+                            href="index.php">Logout</a></h3>
                 </center>
             </div>
             <div class="sidenav" style="height:560px; top: 18%;">
