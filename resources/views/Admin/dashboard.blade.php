@@ -3,7 +3,6 @@
 @section('title')
 Dashboard- Admin Panel
 @endsection
-
 @section('content')
 <div id="content-wrapper">
 
@@ -80,10 +79,5 @@ Dashboard- Admin Panel
                 </div>
             </div>
         </div>
-
-
-
-
-
         <!-- /.content-wrapper -->
         @endsection

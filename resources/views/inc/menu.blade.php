@@ -22,8 +22,6 @@
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#course">Course</a>
           </li>
-
-          
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Contact</a>
           </li>
@@ -34,21 +32,6 @@
       </div>
       
     </div>
-    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user-circle fa-fw"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#">Settings</a>
-              <div class="dropdown-divider"></div>
-              <a href="{{ route('admin.logout') }}" class="dropdown-item" onclick="return confirmLogout(event)">Logout</a>
-          </div>
+      <a href="{{ route('admin.logout') }}" class="btn btn-primary" onclick="return confirmLogout(event)">Sign out</a>
   </nav>
-  <script>
-    function confirmLogout(event) {
-        event.preventDefault(); // Prevent default link action
-        if (confirm("Are you sure you want to log out?")) {
-            window.location.href = event.target.href; // Proceed with logout
-        }
-    }
-</script>
+  

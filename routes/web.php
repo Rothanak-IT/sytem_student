@@ -6,6 +6,7 @@ use App\Http\Controllers\frontEndController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AssignmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,8 @@ Route::post('/login', [adminAuthController::class, 'login'])->name('admin.login'
 Route::get('/logout', [adminAuthController::class, 'logout'])->name('admin.logout');
 
 
+Route::get('/admin/register', [adminAuthController::class, 'showRegister'])->name('admin.register.form');
+Route::post('/admin/register', [adminAuthController::class, 'register'])->name('admin.register');
 
 
 Route::get('/assignment', [adminController::class, 'assignment'])->name('admin.assignment');
@@ -98,6 +101,8 @@ Route::delete('/class/delete/{id}',[adminController::class, 'classDelete'])->nam
 
 Route::get('/notice/cal', [NoticeController::class, 'calNotice'])->name('notice.cal');
 
+
+Route::resource('assignments', AssignmentController::class);
 
 // Resource Controller 
 

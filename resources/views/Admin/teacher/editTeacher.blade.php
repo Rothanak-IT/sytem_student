@@ -18,7 +18,7 @@ td{
               
             <table class="table table-borderless">
                 <div>
-                    <img src="{{ asset('upload/teachers/'.$teacher->photo) }}" alt="No Image">
+                    <img src="{{ asset('upload/teachers/'.$teacher->photo) }}" style=" width: 100%; " alt="No Image">
                 </div>
                 <tr>
                     <td>Teacher Name</td>

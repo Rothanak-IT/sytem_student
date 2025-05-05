@@ -57,15 +57,15 @@
         <span>Course</span></a>
     </li>
     <li class="nav-item active">
-        <a class="nav-link btn btn-primary mt-2" href="{{ route('admin.assignment') }}">
+        <a class="nav-link btn btn-primary mt-2" href="/assignments">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Assignment</span></a>
       </li>
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class="nav-link btn btn-primary mt-2" href="{{ route('admin.examList') }}">
             <i class="fab fa-steam"></i>
           <span>Exam List</span></a>
-      </li>
+      </li> -->
       <li class="nav-item active">
         <a class="nav-link btn btn-primary mt-2" href="{{ route('notice.index') }}">
             <i class="fas fa-flag-checkered"></i>
