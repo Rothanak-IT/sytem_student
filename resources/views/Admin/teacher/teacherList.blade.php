@@ -38,7 +38,6 @@ th,td{
                 <tbody>
                      @foreach ($teachers as $teacher)
                          
-                    
                     <tr>
                         <td>{{ $teacher->id }}</td>
                         <td>{{ $teacher->Name }}</td>
@@ -47,7 +46,6 @@ th,td{
                         <td>
                             <a href="{{ route('admin.teacher.details', $teacher->id) }}" class="btn btn-success">View Details</a>
                         </td>
-             
                     </tr>
                     @endforeach
                 </tbody>

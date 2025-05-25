@@ -10,7 +10,7 @@ td{
     padding: 4px !important;
 }
 </style>
-    <div class="row mt-5">
+    <div class="row">
         <div class="col-md-6 offset-md-3">
             <h3 class="text text-center text-primary">Update Teacher</h3>
             <form action="{{ route('admin.teacher.update', $teacher->id) }}" method="POST" class="form-group" enctype="multipart/form-data">

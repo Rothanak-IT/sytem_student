@@ -8,21 +8,6 @@ use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AssignmentController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 
 // frontEndController for user
 Route::get('/', [frontEndController::class, 'index'])->name('frontEnd.home');
@@ -101,14 +86,13 @@ Route::delete('/class/delete/{id}',[adminController::class, 'classDelete'])->nam
 
 Route::get('/notice/cal', [NoticeController::class, 'calNotice'])->name('notice.cal');
 
-
 Route::resource('assignments', AssignmentController::class);
 
-// Resource Controller 
 
 // Route::resource('course', 'CourseController');
 Route::resources([
     'course' => CourseController::class,
     'notice' => NoticeController::class
 ]);
+
 

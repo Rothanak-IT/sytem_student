@@ -21,11 +21,11 @@
         <a class="dropdown-item" href="blank.html">Blank Page</a>
       </div>
     </li> -->
-    <li class="nav-item active">
+    <!-- <li class="nav-item active">
       <a class="nav-link btn btn-primary mt-2" href="{{ route('admin.classSchedule') }}">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>Class Schedule</span></a>
-    </li>
+    </li> -->
     <li class="nav-item active">
         <a class="nav-link btn btn-primary mt-2" href="{{ route('admin.class') }}">
           <i class="fas fa-fw fa-chart-area"></i>
