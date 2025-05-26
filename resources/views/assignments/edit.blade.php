@@ -12,6 +12,7 @@
 
         <div class="">
             <label for="teacher" class="form-label">Teacher</label>
+            
             <input type="text" id="teacher" name="teacher" class="form-control" 
                 value="{{ old('teacher', $assignment->teacher) }}" required>
         </div>
