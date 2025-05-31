@@ -17,22 +17,18 @@
                             <label for="teacher" class="form-label">Teacher Name</label>
                             <input type="text" id="teacher" name="teacher" class="form-control" required>
                         </div>
-
                         <div class="form-group mb-3">
                             <label for="course" class="form-label">Course Name</label>
                             <input type="text" id="course" name="course" class="form-control" required>
                         </div>
-
                         <div class="form-group mb-3">
                             <label for="title" class="form-label">Assignment Title</label>
                             <input type="text" id="title" name="title" class="form-control" required>
                         </div>
-
                         <div class="form-group mb-3">
                             <label for="description" class="form-label">Description</label>
                             <textarea id="description" name="description" class="form-control" rows="4" required></textarea>
                         </div>
-
                         <div class="form-group mb-3">
                             <label for="due_date" class="form-label">Due Date</label>
                             <input type="date" id="due_date" name="due_date" class="form-control" required>
