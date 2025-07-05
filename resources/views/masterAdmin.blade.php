@@ -28,7 +28,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-primary static-top" >
 
-        <a class="navbar-brand mr-1" href="{{ route('admin.dashboard') }}">Admin Panel</a>
+        <a class="navbar-brand mr-1" href="{{ route('admin.dashboard') }}">SMS</a>
 
         <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
             <i class="fas fa-bars"></i>
@@ -49,7 +49,6 @@
 
     <a href="{{ route('admin.logout') }}" class="btn btn-primary">LOGIN</a>
     </nav>
-
 
     <div class="row mr-0">
         <div class="col-2 leftMenu">
