@@ -96,3 +96,6 @@ Route::resources([
 ]);
 
 
+Route::get('/assignments/{id}/download', [AssignmentController::class, 'download'])->name('assignments.download');
+
+

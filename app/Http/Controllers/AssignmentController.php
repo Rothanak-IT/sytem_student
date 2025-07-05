@@ -6,6 +6,8 @@ use App\Models\Course;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 
 class AssignmentController extends Controller
 {
@@ -125,4 +127,15 @@ class AssignmentController extends Controller
 
         return redirect()->route('assignments.index')->with('success', 'Assignment deleted successfully!');
     }
+
+
+
+public function download($id)
+{
+    $assignment = Assignment::findOrFail($id);
+
+    $pdf = Pdf::loadView('pdf.assignment', compact('assignment'));
+    return $pdf->download('assignment_' . $assignment->id . '.pdf');
+}
+
 }
