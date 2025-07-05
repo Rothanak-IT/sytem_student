@@ -19,31 +19,21 @@ class adminAuthController extends Controller
 
     }
 
-    public function login(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required',
-            'password' => 'required'
-        ]);
+public function login(Request $request)
+{
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required|string|min:6',
+    ]);
 
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
+    $credentials = $request->only('email', 'password');
 
-        $credentails = $request->only('email', 'password');
-
-        // var_dump($credentails);
-
-        if (Auth::attempt($credentails)) {
-            //    return view('admin.dashboard');
-            return redirect()->route('admin.dashboard');
-        } else {
-            return redirect()->route('admin.login');
-        }
-
-
-
+    if (Auth::attempt(credentials: $credentials)) {
+        return redirect()->route('admin.dashboard'); // or your desired route
     }
+
+    return back()->with('error', 'Invalid email or password.');
+}
 
 
     // Show registration form
